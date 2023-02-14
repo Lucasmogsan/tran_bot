@@ -8,13 +8,11 @@ import math
 
 class Tranbot:
 
-    def __init__(self, name,
+    def __init__(self,
                 pinRightFwd, pinRightRev, pinLeftFwd, pinLeftRev,
                 wheel_diameter=.065, wheel_base=0.15,
                 left_max_rpm=200.0, right_max_rpm=200.0,
                 frequency=20):
-
-        super().__init__(name)
 
         self._frequency = frequency
         self._left_max_rpm = left_max_rpm
@@ -104,7 +102,7 @@ class Tranbot:
 def main():
     rospy.init_node('motor_control_test')
 
-    bot_1 = Tranbot('bot1', pinRightFwd=10, pinRightRev=9,
+    bot_1 = Tranbot(pinRightFwd=10, pinRightRev=9,
                 pinLeftFwd=8, pinLeftRev=7, left_max_rpm=195,
                 right_max_rpm=202)
 
